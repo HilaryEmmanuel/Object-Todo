@@ -16,7 +16,7 @@ This a Todo API that utilizes a JavaScript object is a temporary form of storage
 
 - Build and run the project
   
-  ` node node ./bin/www `
+  ` npm start  `
 
 # Technology used
 - Nodejs
