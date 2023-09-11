@@ -8,7 +8,7 @@ exports.addTodo = (req, res) => { /* Add a Todo */
     }
 
     if (!newTodo.id || !newTodo.fullname || !newTodo.colour) {
-        res.status(204).json({ todo: "no todo added" });
+        res.status(200).json({ todo: "add a todo" });
     } else {
         dataStore.arraydb[req.body.id] = newTodo;
         res.status(201).json(dataStore.arraydb);
@@ -52,7 +52,7 @@ exports.getAllTodo = (req, res) => { /*get all todos */
     if (Object.values(dataStore.arraydb) != '') {
         res.status(200).json(dataStore.arraydb);
     } else {
-        res.status(204).json({ todo: "no todo added" });
+        res.status(200).json({ todo: "no todo added" });
     }
 }
 
