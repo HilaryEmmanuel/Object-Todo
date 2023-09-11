@@ -1,4 +1,4 @@
-exports.arraydb = {
+exports.Objectdb = {
 
 }
 
