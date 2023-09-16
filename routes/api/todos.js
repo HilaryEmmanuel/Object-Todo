@@ -2,16 +2,17 @@ const express = require('express');
 const router = express.Router();
 const handler = require('../../controller/handler')
 
+router.get('/', handler.main);
 
-router.post('/add', handler.addTodo); 
+router.post('/v1/api/todos/add', handler.addTodo); 
 
-router.get('/', handler.getAllTodo);
+router.get('/v1/api/todos/getall', handler.getAllTodo);
 
-router.put('/update/:id', handler.updateTodo);
+router.put('/v1/api/todos/update/:id', handler.updateTodo);
 
-router.get('/todo/:id', handler.getTodo);
+router.get('/v1/api/todos/todo/:id', handler.getTodo);
 
-router.delete('/delete/:id', handler.deleteTodo);
+router.delete('/v1/api/todos/delete/:id', handler.deleteTodo);
 
 
 
